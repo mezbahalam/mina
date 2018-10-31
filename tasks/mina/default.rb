@@ -40,8 +40,8 @@ task :debug_configuration_variables do
   end
 end
 
-# desc 'Adds repo host to the known hosts'
-# task :ssh_keyscan_repo do
+desc 'Adds repo host to the known hosts'
+task :ssh_keyscan_repo do
 #   ensure!(:repository)
 #   repo_host = fetch(:repository).split(%r{@|://}).last.split(%r{:|\/}).first
 #   repo_port = /:([0-9]+)/.match(fetch(:repository)) && /:([0-9]+)/.match(fetch(:repository))[1] || '22'
@@ -53,10 +53,10 @@ end
 #       ssh-keyscan -t rsa -p #{repo_port} -H #{repo_host} >> ~/.ssh/known_hosts
 #     fi
 #   }
-# end
+end
 
-# desc 'Adds domain to the known hosts'
-# task :ssh_keyscan_domain do
+desc 'Adds domain to the known hosts'
+task :ssh_keyscan_domain do
 #   ensure!(:domain)
 #   ensure!(:port)
 #   run :local do
@@ -66,7 +66,7 @@ end
 #       fi
 #     }
 #   end
-# end
+end
 
 desc 'Runs a command in the server.'
 task :run, [:command] do |_, args|
