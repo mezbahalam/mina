@@ -1,4 +1,4 @@
-set :rbenv_path, "$HOME/.rbenv"
+set :rbenv_path, "/home/ubuntu/.rbenv/bin/rbenv"
 
 task :'rbenv:load' do
   comment %{Loading rbenv}
